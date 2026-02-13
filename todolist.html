@@ -208,6 +208,10 @@
 			/* Check if both hidden and unhidden elements exist at the same time
 			bothExist = (unhiddenCount > 0) && (hiddenCount > 0)
 			
+			console.log(unhiddenCount);
+			console.log(hiddenCount);
+			console.log(bothExist);
+			
 			//If there exist both hidden and unhidden completed tasks, hide all completed tasks
 			allItems.forEach(item => {
 				const hasLineThrough = window.getComputedStyle(item).textDecoration.includes('line-through');
