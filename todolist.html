@@ -210,7 +210,30 @@
 
 		/* OnClick function for [Toggle] Button */
 		function hideCompleted(){
-			console.log("hideCompleted - started")
+			console.log("hideCompleted - started");
+			const allItems = document.querySelectorAll('#order_list li');
+			
+			// Check if there are completed task(s) unhidden
+			let unhiddenCount = 0;
+			let hiddenCount = 0;
+
+			// Trasverse Ordered List to check numbers of hidden and unhidden elements
+			allItems.forEach(item => { 
+				const hasLineThrough = window.getComputedStyle(item).textDecoration.includes('line-through');
+				if (hasLineThrough) {	
+					if (item.style.display == 'none') {
+						unhiddenCount += 1;
+					} else {
+						hiddenCount += 1;
+					}
+				}
+			});
+			/* Check if both hidden and unhidden elements exist at the same time
+			bothExist = (unhiddenCount > 0) && (hiddenCount > 0);
+			
+			console.log(unhiddenCount);
+			console.log(hiddenCount);
+			console.log(bothExist);
 		}
 
 
