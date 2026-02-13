@@ -234,6 +234,22 @@
 			console.log(unhiddenCount);
 			console.log(hiddenCount);
 			console.log(bothExist);
+			
+			//If there exist both hidden and unhidden completed tasks, hide all completed tasks
+			allItems.forEach(item => {
+				const hasLineThrough = window.getComputedStyle(item).textDecoration.includes('line-through');
+				if (hasLineThrough) {
+				//if (item.style.textDecoration.include('line-through')) {
+					if (item.style.display == 'none' && !bothExist) {
+						item.style.display = 'list-item';
+					} else {
+						item.style.display = 'none';
+					}
+		        }
+   			});
+			
+			/* Move Cursor into Text Area */
+			document.getElementById('text').focus();
 		}
 
 
