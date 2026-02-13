@@ -186,89 +186,9 @@
 			/* Move Cursor into Text Area */
 			document.getElementById('text').focus();
 		}
-/*
-		/* OnClick Function for [Toggle] Button */
-		function hideCompleted() {
-			console.log("Toggle");
-			const allItems = document.querySelectorAll('#order_list li');
-			// Check if there are completed task(s) unhidden
-			let unhiddenCount = 0;
-			let hiddenCount = 0;
-			
-			allItems.forEach(item => { // Trasverse Ordered List to check numbers of hidden and unhidden elements
-				const hasLineThrough = window.getComputedStyle(item).textDecoration.includes('line-through');
-				if (hasLineThrough) {	
-					if (item.style.display == 'none') {
-						unhiddenCount += 1;
-					} else {
-						hiddenCount += 1;
-					}
-				}
-			});
-			
-			/* Check if both hidden and unhidden elements exist at the same time
-			bothExist = (unhiddenCount > 0) && (hiddenCount > 0);
-			
-			console.log(unhiddenCount);
-			console.log(hiddenCount);
-			console.log(bothExist);
-			
-			//If there exist both hidden and unhidden completed tasks, hide all completed tasks
-			allItems.forEach(item => {
-				const hasLineThrough = window.getComputedStyle(item).textDecoration.includes('line-through');
-				if (hasLineThrough) {
-				//if (item.style.textDecoration.include('line-through')) {
-					if (item.style.display == 'none' && !bothExist) {
-						item.style.display = 'list-item';
-					} else {
-						item.style.display = 'none';
-					}
-		        }
-   			});
-			
-			/* Move Cursor into Text Area */
-			document.getElementById('text').focus();
-		}
-*/
 
-	//**************************************
-/*
 
-		function hideCompleted() {
-			const allItems = document.querySelectorAll('#order_list li');
-			// Check if there are completed task(s) unhidden
-			let unhiddenCount = 0;
-			let hiddenCount = 0;
-			
-			allItems.forEach(item => {
-				const hasLineThrough = window.getComputedStyle(item).textDecoration.includes('line-through');
-				if (hasLineThrough) {	
-					if (item.style.display == 'none') {
-						unhiddenCount += 1;
-					} else {
-						hiddenCount += 1;
-					}
-				}
-			});
-			bothExist = (unhiddenCount > 0) && (hiddenCount > 0)
-			//If there exist both hidden and unhidden completed tasks, hide all completed tasks
-			allItems.forEach(item => {
-				const hasLineThrough = window.getComputedStyle(item).textDecoration.includes('line-through');
-				if (hasLineThrough) {
-				//if (item.style.textDecoration.include('line-through')) {
-					if (item.style.display == 'none' && !bothExist) {
-						item.style.display = 'list-item';
-					} else {
-						item.style.display = 'none';
-					}
-		        }
-   			});
-			document.getElementById('text').focus();
-		}
 
-//**************************************
-
-*/
 	
 		/* OnClick Function for [Email] Button */
 		function sendList() {
