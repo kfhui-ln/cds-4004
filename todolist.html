@@ -11,87 +11,63 @@
 
 		/* COLORS PALETTE */
 		:root {
-		--powder-blush: #ffa69eff;
-		--eggshell: #faf3ddff;
-		--icy-aqua: #b8f2e6ff;
-		--light-blue: #aed9e0ff;
-		--blue-slate: #5e6472ff;
-		--task-cat1: #ff0000ff;  //red for task cat 1
-		//--task-cat2: #00ff00ff;
-			--task-cat2: #000000ff;  //black for task cat 2
-		//--task-cat3: #0000ffff;
-			--task-cat3: #808080ff;  //grey for task cat 3
+			--powder-blush: #ffa69eff;
+			--eggshell: #faf3ddff;
+			--icy-aqua: #b8f2e6ff;
+			--light-blue: #aed9e0ff;
+			--blue-slate: #5e6472ff;
+			--task-cat1: #ff0000ff;  //red for task cat 1
+			//--task-cat2: #00ff00ff;
+				--task-cat2: #000000ff;  //black for task cat 2
+			//--task-cat3: #0000ffff;
+				--task-cat3: #808080ff;  //grey for task cat 3
 		}
 
-	button {
-  		//background-color: #c2fbd7;
-		background-color: var(--powder-blush);
-		//background-color: var(--icy-aqua);
-  		border-radius: 100px;
-  		box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
-  		//color: green;
-  		color: var(--blue-slate);
-  		cursor: pointer;
-  		display: inline-block;
-  		font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
-  		padding: 7px 20px;
-  		text-align: center;
-  		text-decoration: none;
-  		transition: all 250ms;
-  		border: 0;
-  		font-size: 16px;
-  		user-select: none;
-  		-webkit-user-select: none;
-  		touch-action: manipulation;
-	}
-
-	button:hover {
-  		box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
-  		transform: scale(1.05) rotate(-1deg);
-	}
-		
-/*
+		/* Button Style */
 		button {
-		  display: flex;
-		  align-items: center;
-		  justify-content: center;
-		  line-height: 1;
-		  text-decoration: none;
-		  //color: #e74b7e;
-		  color: var(--blue-slate);
-		  font-size: 18px;
-		  border-radius: 20px;
-		  width: 200px;
-		  height: 40px;
-		  font-weight: bold;
-		  transition: 0.3s;
-		  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.25);
-		  text-shadow: 1px 1px 2px rgba(255, 255, 255, 1);
-		  //background-color: [object object];
-		  background-color: var(--powder-blush);
-		  background-image: linear-gradient(180deg, rgba(254, 214, 227, 1), rgba(255, 126, 168, 1));
-		}
-		
-		button:hover {
-		  box-shadow: 0 0 rgba(0, 0, 0, 0);
+	  		background-color: var(--powder-blush);
+			//background-color: var(--icy-aqua);
+	  		border-radius: 100px;
+	  		box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+	  		color: var(--blue-slate);
+	  		cursor: pointer;
+	  		display: inline-block;
+	  		font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+	  		padding: 7px 20px;
+	  		text-align: center;
+	  		text-decoration: none;
+	  		transition: all 250ms;
+	  		border: 0;
+	  		font-size: 16px;
+	  		user-select: none;
+	  		-webkit-user-select: none;
+	  		touch-action: manipulation;
 		}
 
-*/
+		button:hover {
+	  		box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+	  		transform: scale(1.05) rotate(-1deg);
+		}
+
+		/* Line-Through Style for Completed Task(s) */
 		.completed {
 			text-decoration: line-through;
 		}
 
+		/* Body Style */
 		body {
 			//background-color: var(--eggshell);
 			background-color: var(--icy-aqua);
   			color: var(--blue-slate);
 		}
-		
+
+		/* Button Colors */
 		.button {
   			background-color: var(--powder-blush);
   			color: var(--blue-slate);
 		}
 
+		/* Button Positioning */
 		.divButton {
     		display: flex;
     		justify-content: center;  /* Centers horizontally */
@@ -100,7 +76,8 @@
     		//height: 100vh;           /* Full viewport height for vertical centering */
 			margin: 10px;
 		}
-		
+
+		/* Text Area Style */
 		textarea {
 		  font-size: 25px;
 		  width:100%;
@@ -108,6 +85,7 @@
 		  background-color: var(--eggshell);
 		}
 
+		/* Ordered List Font Style */
 		li {
 			font-size: 30px;
 			//border-left-width: 10px;
@@ -117,34 +95,106 @@
 </head>
 
 <body>
+
+	/* Project Title */
 	<h2>CDS4004 - Assignment 1: ToDo List</h2>
 	<h3>by HUI, Kai Fong (4126668)</h3>
-	
+
+	/* Definition of Text Area */
 	<textarea id='text' rows="3" placeholder='Please enter task(s) in format <task content>,<task category (1,2, or 3)> delimited by ";"'></textarea> 
+
 	<br/>
+
+	/* Definition of Buttons */
 	<div class='divButton'>
 		<button id='btn_add' onclick="addTasks()" title="Add task(s)">Add</button>
 		<button id='btn_hide' onclick="hideCompleted()" title="Show/Hide completed task(s)">Toggle</button>
-		
 		<button id='btn_email' onclick="sendList()" title="Send ToDo List via email">Email</button>
-		
 	</div>
 
 	<br/>
-	
+
+	/* Definition of Ordered List */
 	<ol id='order_list'>
 
 	</ol>	
 </body>
 
+	/* JavaScript Section */
 	<script>
+
+		/* OnClick Function for [Add] Button */
+		function addTasks() {
+			let textboxValue = document.getElementById('text').value;
+			
+			if (textboxValue.trim().length > 0) {
+				console.log("@" + textboxValue);
+				let array = textboxValue.split(";");
+				console.log(array);
+				//let splitArray = array.map(item => item.split(",").trim()).map(part => part.trim());
+				let result = array.map(item =>item.split(",").map(part => part.trim()));
+				console.log(result);
+				console.log("result.length:" + result.length);
+				
+				for (let i = 0; i < result.length; i++) {
+					//if (textboxValue[i].length == 2) {
+					if (result[i][0].trim().length > 0) {   //task with empty descrption is skipped
+						let item = "* " + result[i][0] + ", " + result[i][1];
+						console.log(item)
+					
+						let ol = document.getElementById('order_list');
+						let li = document.createElement('li');
+	
+						//li.style.color = "--task-cat" + result[i][1];
+						console.log("--task-cat" + result[i][1]);
+						let data = document.createElement('data');
+						data.textContent = result[i][0];
+						//data.value = result[i][1];
+						data.color = result[i][1];
+						data.title = "Double click to delete task / Single click to toggle completion status";
+						li.appendChild(data); // Add new task to task list
+	
+						/* Listener for Double Click */
+						li.addEventListener('dblclick', function() {
+	                		//if (confirm(`Delete current task "' + result[i][0] + '"?`)) {
+							if (confirm(`Delete current task "${result[i][0]}"?`)) {
+	                    	this.remove();
+	                		}
+	            		});
+	
+						/* Listener for Single Click */
+						li.addEventListener('click', function() {
+							this.classList.toggle('completed');
+	                		//if (confirm(`Strike thru current task?`)) {
+	                    	//this.remove();
+							//this.style.textDecoration = 'line-through';
+	            		});
+	
+						//li.style.color = "var(--task-cat" + "result[i][1])";
+						let colorCode = "var(--task-cat"+ result[i][1] + ")";
+						console.log(colorCode);
+					    li.style.setProperty('color', colorCode);
+						ol.appendChild(li);
+						//ol.appendChild(li);
+						
+					}  //task with empty descrption is skipped
+					//}	
+				}
+				/* Clear Text Area */
+				document.getElementById('text').value = '';
+			}
+			/* Move Cursor into Text Area */
+			document.getElementById('text').focus();
+		}
+
+		/* OnClick Function for [Toggle] Button */
 		function hideCompleted() {
 			const allItems = document.querySelectorAll('#order_list li');
 			// Check if there are completed task(s) unhidden
 			let unhiddenCount = 0;
 			let hiddenCount = 0;
 			
-			allItems.forEach(item => {
+			allItems.forEach(item => { // Trasverse Ordered List to check numbers of hidden and unhidden elements
 				const hasLineThrough = window.getComputedStyle(item).textDecoration.includes('line-through');
 				if (hasLineThrough) {	
 					if (item.style.display == 'none') {
@@ -154,7 +204,10 @@
 					}
 				}
 			});
+			
+			/* Check if both hidden and unhidden elements exist at the same time
 			bothExist = (unhiddenCount > 0) && (hiddenCount > 0)
+			
 			//If there exist both hidden and unhidden completed tasks, hide all completed tasks
 			allItems.forEach(item => {
 				const hasLineThrough = window.getComputedStyle(item).textDecoration.includes('line-through');
@@ -167,99 +220,20 @@
 					}
 		        }
    			});
+			
+			/* Move Cursor into Text Area */
 			document.getElementById('text').focus();
 		}
-		function addTasks() {
-			let textboxValue = document.getElementById('text').value;
-			if (textboxValue.trim().length > 0) {
-			console.log("@" + textboxValue);
-			let array = textboxValue.split(";");
-			console.log(array);
-			//let splitArray = array.map(item => item.split(",").trim()).map(part => part.trim());
-			let result = array.map(item =>item.split(",").map(part => part.trim()));
-			console.log(result);
-			console.log("result.length:" + result.length);
-			for (let i = 0; i < result.length; i++) {
-				//if (textboxValue[i].length == 2) {
-				if (result[i][0].trim().length > 0) {   //task with empty descrption is skipped
-					let item = "* " + result[i][0] + ", " + result[i][1];
-					console.log(item)
-				
-					let ol = document.getElementById('order_list');
-					let li = document.createElement('li');
 
-					//li.style.color = "--task-cat" + result[i][1];
-					console.log("--task-cat" + result[i][1]);
-					let data = document.createElement('data');
-					data.textContent = result[i][0];
-					//data.value = result[i][1];
-					data.color = result[i][1];
-
-					data.title = "Double click to delete task / Single click to toggle completion status";
-
-					li.appendChild(data);
-				    li.addEventListener('dblclick', function() {
-                		//if (confirm(`Delete current task "' + result[i][0] + '"?`)) {
-						if (confirm(`Delete current task "${result[i][0]}"?`)) {
-                    	this.remove();
-                		}
-            		});
-				    li.addEventListener('click', function() {
-						this.classList.toggle('completed');
-                		//if (confirm(`Strike thru current task?`)) {
-                    	//this.remove();
-						//this.style.textDecoration = 'line-through';
-						/*
-						if (this.style.textDecoration == 'line-through') {
-        					//console.log('Already has line-through');
-							//this.style.textDecorationLine = ''
-							this.style.textDecoration = ''
-    					} else {
-        					this.style.textDecoration = 'line-through';
-    					}
-						*/
-            		});
-					//li.style.color = "var(--task-cat" + "result[i][1])";
-					let colorCode = "var(--task-cat"+ result[i][1] + ")";
-					console.log(colorCode);
-				    li.style.setProperty('color', colorCode);
-					ol.appendChild(li);
-				
-					//ol.appendChild(li);
-				}  //task with empty descrption is skipped
-				//}	
-			}
-			/*
-			let nestedArray = [
-    			["Dinner", "1"],
-				["Exercise", "2"],
-				["Study", "3"]
-			];
-			console.log("result.length:" + result.length);
-			for (let i = 0; i < result.length; i++) {
-    			for (let j = 0; j < result[i].length; j++) {
-        			console.log("#"+result[i][j]);
-    			}
-			}
-			*/
-			document.getElementById('text').value = '';
-			}
-			document.getElementById('text').focus();
-		}
-/*
-		function sendList(){
-			let emailAddr = "kaifonghui@ln.hk"
-			if (confirm('Send ToDo List to ' + emailAddr + '?')) {
-            	alert('ToDo List is sent to '+emailAddr + '.'); 
-            }
-		}
-*/
+		/* OnClick Function for [Email] Button */
 		function sendList() {
-			let emailAddr = "kaifonghui@ln.hk"
+			let emailAddr = "kaifonghui@ln.hk" //predefined email address
+			
 			if (confirm('Send ToDo List to ' + emailAddr + '?')) {
 			    const items = document.querySelectorAll('#order_list li');
 			    let toDoList = "ToDo List:\n\n";
 			    //items.forEach((item, i) => toDoList += `${i+1}. ${item.textContent}\n`);
+				/* Traverse ToDo List */
 				items.forEach((item, i) => toDoList += `${i+1}. ${item.textContent}, ${item.style.color.charAt(item.style.color.length - 2)}\n`);
 			    window.location.href = `mailto:${emailAddr}?subject=${encodeURIComponent("ToDo List")}&body=${encodeURIComponent(toDoList)}`;
 				//alert(`mailto:${emailAddr}?subject=${encodeURIComponent("ToDo List")}&body=${encodeURIComponent(toDoList)}`);
