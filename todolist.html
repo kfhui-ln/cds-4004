@@ -101,7 +101,7 @@
 	<div>
 		<label style="font-size: 24px;">by HUI, Kai Fong (4126668)</label>
 		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-		<label for="email">Email Address: </label>
+		<label for="email">Predefined Email Address: </label>
         <input name="email" id="email" placeholder='Email Address' value='kaifonghui@ln.hk'>
 	</div>
 	
@@ -129,6 +129,8 @@
 
 	<!-- JavaScript Section -->
 	<script>
+
+	//**********************************************
 
 		/* OnClick Function for [Add] Button */
 		function addTasks() {
@@ -194,12 +196,13 @@
 			document.getElementById('text').focus();
 		}
 
-
-
+	//**********************************************
 	
 		/* OnClick Function for [Email] Button */
 		function sendList() {
-			let emailAddr = "kaifonghui@ln.hk" //predefined email address
+			//let emailAddr = "kaifonghui@ln.hk" //predefined email address
+			const emailAddr = document.getElementById('email').value; //get predefined email address
+			console.log(emailAddr);
 			
 			if (confirm('Send ToDo List to ' + emailAddr + '?')) {
 			    const items = document.querySelectorAll('#order_list li');
@@ -213,7 +216,7 @@
 			}
 		}
 
-//**********************************************
+	//**********************************************
 
 		/* OnClick function for [Toggle] Button */
 		function hideCompleted(){
@@ -259,15 +262,7 @@
 			document.getElementById('text').focus();
 		}
 
-
-
-
-
-		
-
-
-
-//**********************************************
+	//**********************************************
 		
 	</script>
 </html>
